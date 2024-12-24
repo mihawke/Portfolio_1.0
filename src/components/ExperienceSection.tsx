@@ -8,8 +8,6 @@ interface ProjectCardProps {
   image: string;
   liveUrl?: string;
   githubUrl?: string;
-  company?: string;
-  duration?: string;
 }
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
@@ -18,8 +16,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   liveUrl,
   githubUrl,
-  company,
-  duration
 }) => (
   <div className="relative group">
     <div className="relative flex flex-col h-full rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl">
@@ -34,19 +30,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
 
       {/* Content Container */}
-      <div className="relative flex-1 p-6 bg-white group-hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] transition-all duration-300">
+      <div className="relative flex-1 p-6 bg-white group-hover:bg-gradient-to-r from-indigo-600 to-indigo-400 transition-all duration-300">
         <div className="space-y-4">
-          {/* Title and Company */}
-          <div>
-            <h3 className="text-xl font-bold text-gray-800 group-hover:text-white">
-              {title}
-            </h3>
-            {company && (
-              <p className="text-[#5651e5] group-hover:text-white/90">
-                {company} • {duration}
-              </p>
-            )}
-          </div>
 
           {/* Description */}
           <p className="text-gray-600 group-hover:text-white/90">
@@ -104,8 +89,6 @@ const ExperienceSection = () => {
   const projects = [
     {
       title: "E-Commerce Platform",
-      company: "Tech Solutions Inc",
-      duration: "2023 - Present",
       description: "Developed a full-stack e-commerce platform with features including user authentication, product management, and payment integration.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
       image: "/api/placeholder/800/400",
@@ -114,8 +97,6 @@ const ExperienceSection = () => {
     },
     {
       title: "Social Media Analytics Dashboard",
-      company: "Data Insights Co",
-      duration: "2022 - 2023",
       description: "Built a real-time analytics dashboard for social media metrics using modern web technologies.",
       technologies: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS"],
       image: "/api/placeholder/800/400",
@@ -123,24 +104,40 @@ const ExperienceSection = () => {
       githubUrl: "https://github.com/example"
     },
     {
-      title: "AI-Powered Content Manager",
-      company: "AI Innovations Ltd",
-      duration: "2021 - 2022",
-      description: "Created an AI-powered content management system with automated content generation and optimization features.",
-      technologies: ["Python", "React", "FastAPI", "Docker", "AWS"],
+      title: "Expense Tracker",
+      description: "Developed a comprehensive expense tracking application that allows users to monitor their spending habits, create budgets, and generate financial reports.",
+      technologies: [
+        "MongoDB",
+        "Express.js",
+        "React",
+        "Node.js",
+        "Chart.js",
+        "JWT Authentication",
+        "Mongoose",
+        "REST API"
+      ],
       image: "/api/placeholder/800/400",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example"
+      liveUrl: "https://expense-tracker-demo.herokuapp.com",
+      githubUrl: "https://github.com/username/expense-tracker"
     },
     {
-      title: "Healthcare Management System",
-      company: "HealthTech Solutions",
-      duration: "2020 - 2021",
-      description: "Developed a comprehensive healthcare management system for patient records and appointment scheduling.",
-      technologies: ["React", "Node.js", "MySQL", "Socket.io"],
+      title: "Dynamic Form Generator",
+      description: "Built a versatile form generator platform that converts JSON schemas into interactive web forms.",
+      technologies: [
+        "MongoDB",
+        "Express.js",
+        "React",
+        "Node.js",
+        "TypeScript",
+        "JSON Schema",
+        "Formik",
+        "Redux Toolkit",
+        "REST API",
+        "JWT Authentication"
+      ],
       image: "/api/placeholder/800/400",
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example"
+      liveUrl: "https://json-form-generator.herokuapp.com",
+      githubUrl: "https://github.com/username/json-form-generator"
     }
   ];
 
@@ -150,11 +147,8 @@ const ExperienceSection = () => {
         <div className="space-y-12">
           {/* Header */}
           <div className="space-y-4">
-            <p className="text-xl tracking-widest uppercase text-[#5651e5] font-medium">
-              Experience
-            </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-700">
-              Previous Jobs and Projects
+              Experience
             </h2>
             <p className="text-gray-600 max-w-2xl text-lg">
               Here are some of the key projects I've worked on throughout journey.

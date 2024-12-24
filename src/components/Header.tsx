@@ -33,7 +33,7 @@ const Header = () => {
                 <a href="/" className="flex items-center">
                     <img
                         src="/api/placeholder/48/48"
-                        alt="Pratik Gawari"
+                        alt="PG"
                         className="w-12 h-12 rounded-full"
                     />
                 </a>
@@ -45,32 +45,14 @@ const Header = () => {
                             <li key={label} className="group">
                                 <a
                                     href={href}
-                                    className="ml-10 text-sm uppercase tracking-wider text-gray-700 hover:text-[#5651e5] transition-colors duration-300"
+                                    className="ml-10 text-sm font-semibold font-roboto uppercase text-gray-700 hover:text-indigo-500 transition-colors duration-300"
                                 >
                                     {label}
-                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-[#5651e5]"></span>
                                 </a>
                             </li>
                         ))}
                     </ul>
                 </nav>
-            </div>
-
-            {/* Mobile Navigation */}
-            <div className={`md:hidden ${isOpen ? 'fixed' : 'hidden'} left-0 top-20 w-full bg-white/95 backdrop-blur-sm`}>
-                <ul className="py-4 px-4">
-                    {navItems.map(({ href, label }) => (
-                        <li key={label} className="py-4 border-b border-gray-200 last:border-none">
-                            <a
-                                href={href}
-                                onClick={() => setIsOpen(false)}
-                                className="text-sm uppercase tracking-wider text-gray-700 hover:text-[#5651e5] transition-colors duration-300 block"
-                            >
-                                {label}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
             </div>
         </header>
     );

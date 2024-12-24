@@ -1,43 +1,39 @@
-import React, { ReactInstance, ReactNode } from 'react';
+import React, {  ReactNode } from 'react';
 
 interface SkillCardProps {
   title: string
   icon: ReactNode
 }
 const SkillCard: React.FC<SkillCardProps> = ({ title, icon }) => (
-  <div className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 bg-white/80 backdrop-blur-sm group">
-    <div className="grid grid-cols-2 gap-4 justify-center items-center">
-      <div className="flex justify-center items-center">
-        {icon}
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <h3 className="text-lg font-semibold text-gray-700 group-hover:text-[#5651e5] transition-colors duration-300">
-          {title}
-        </h3>
-      </div>
+  <div className="grid grid-cols-2 items-center p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300 bg-white/80 backdrop-blur-sm group">
+    <div className="flex justify-center items-center">
+      {icon}
     </div>
+    <h3 className="text-lg font-semibold text-gray-700 group-hover:text-indigo-500 transition-colors duration-300">
+      {title}
+    </h3>
   </div>
 );
 
 const SkillsSection = () => {
   const skills = [
     // MERN Stack
-    { title: 'MongoDB', icon: <img src="/api/placeholder/64/64" alt="MongoDB" className="w-16 h-16" /> },
-    { title: 'Express.js', icon: <img src="/api/placeholder/64/64" alt="Express.js" className="w-16 h-16" /> },
-    { title: 'React', icon: <img src="/api/placeholder/64/64" alt="React" className="w-16 h-16" /> },
-    { title: 'Node.js', icon: <img src="/api/placeholder/64/64" alt="Node.js" className="w-16 h-16" /> },
+    { title: 'MongoDB', icon: <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" alt="MongoDB" className="w-16 h-16" /> },
+    { title: 'Express.js', icon: <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" alt="Express.js" className="w-16 h-auto" /> },
+    { title: 'React', icon: <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" className="w-16 h-16" /> },
+    { title: 'Node.js', icon: <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" className="w-16 h-16" /> },
+    { title: 'Redux', icon: <img src="https://www.vectorlogo.zone/logos/js_redux/js_redux-icon.svg" alt="Redux" className="w-16 h-16" /> },
 
     // Frontend
-    { title: 'JavaScript', icon: <img src="/api/placeholder/64/64" alt="JavaScript" className="w-16 h-16" /> },
-    { title: 'TypeScript', icon: <img src="/api/placeholder/64/64" alt="TypeScript" className="w-16 h-16" /> },
-    { title: 'Tailwind', icon: <img src="/api/placeholder/64/64" alt="Tailwind" className="w-16 h-16" /> },
-    { title: 'Next.js', icon: <img src="/api/placeholder/64/64" alt="Next.js" className="w-16 h-16" /> },
+    { title: 'JavaScript', icon: <img src="https://www.vectorlogo.zone/logos/javascript/javascript-icon.svg" alt="JavaScript" className="w-16 h-16" /> },
+    { title: 'TypeScript', icon: <img src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg" alt="TypeScript" className="w-16 h-16" /> },
+    { title: 'Tailwind', icon: <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind" className="w-16 h-16" /> },
+    { title: 'HTML', icon: <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="HTML" className="w-16 h-auto" /> },
+    { title: 'CSS', icon: <img src="https://www.vectorlogo.zone/logos/netlifyapp_watercss/netlifyapp_watercss-ar21.svg" alt="CSS" className="w-16 h-16" /> },
 
     // Backend & Tools
-    { title: 'Python', icon: <img src="/api/placeholder/64/64" alt="Python" className="w-16 h-16" /> },
-    { title: 'PostgreSQL', icon: <img src="/api/placeholder/64/64" alt="PostgreSQL" className="w-16 h-16" /> },
-    { title: 'Git', icon: <img src="/api/placeholder/64/64" alt="Git" className="w-16 h-16" /> },
-    { title: 'Docker', icon: <img src="/api/placeholder/64/64" alt="Docker" className="w-16 h-16" /> }
+    { title: 'PostgreSQL', icon: <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL" className="w-16 h-16" /> },
+    { title: 'Git', icon: <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git" className="w-16 h-16" /> },
   ];
 
   return (
@@ -46,9 +42,6 @@ const SkillsSection = () => {
         <div className="space-y-12">
           {/* Header */}
           <div className="space-y-4 text-center">
-            <p className="text-xl tracking-widest uppercase text-[#5651e5] font-medium">
-              Skills
-            </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-700">
               My Tech Stack
             </h2>
@@ -68,19 +61,8 @@ const SkillsSection = () => {
               />
             ))}
           </div>
-
-          {/* Additional Info */}
-          <div className="text-center">
-            <p className="text-gray-600">
-              And many more technologies I work with to create modern web applications.
-            </p>
-          </div>
         </div>
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute -z-10 right-0 w-72 h-72 bg-[#5651e5]/5 rounded-full blur-3xl" />
-      <div className="absolute -z-10 left-0 w-72 h-72 bg-[#709dff]/5 rounded-full blur-3xl" />
     </section>
   );
 };

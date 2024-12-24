@@ -20,20 +20,23 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="w-full">
-
+    <section className="flex w-full items-center justify-center gap-20 py-40">
+      <div>
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-700 mb-5">
+          Let's <span className='text-indigo-600'>Connect !</span>
+        </h2>
+        <p className='max-w-xs font-roboto'>
+          If you want to know more about me or my work, or if you would just like to say hello, send me a message. I'd love to hear from you.
+        </p>
+      </div>
       {/* Form */}
       <form
         name="formContact"
         action="https://formsubmit.co/ab5de6c200178acf60060d82d28a2027"
         method="POST"
-        className="max-w-xl space-y-2 mx-auto mt-20"
+        className="max-w-xl space-y-2"
       >
 
-
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-700 mb-5">
-          Let's <span className='text-[#5651e5]'>Connect</span>
-        </h2>
         {/* Name Field */}
         <input
           id="name"
@@ -43,7 +46,7 @@ const ContactSection = () => {
           value={formData.name}
           onChange={handleChange}
           className="w-full px-4 py-3 rounded-lg border border-gray-300 
-                           focus:ring-2 focus:ring-[#5651e5] focus:border-transparent
+                           focus:ring-2 focus:ring-indigo-600 focus:border-transparent
                            transition duration-200 outline-none"
           placeholder="Your name"
         />
@@ -57,7 +60,7 @@ const ContactSection = () => {
           value={formData.email}
           onChange={handleChange}
           className="w-full px-4 py-3 rounded-lg border border-gray-300 
-                         focus:ring-2 focus:ring-[#5651e5] focus:border-transparent
+                         focus:ring-2 focus:ring-indigo-600 focus:border-transparent
                          transition duration-200 outline-none"
           placeholder="your.email@example.com"
         />
@@ -71,7 +74,7 @@ const ContactSection = () => {
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-3 rounded-lg border border-gray-300 
-                         focus:ring-2 focus:ring-[#5651e5] focus:border-transparent
+                         focus:ring-2 focus:ring-indigo-600 focus:border-transparent
                          transition duration-200 outline-none resize-none"
           placeholder="What's on your mind?"
         />
@@ -80,11 +83,11 @@ const ContactSection = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-2 px-4 rounded-lg bg-gradient-to-r from-[#5651e5] to-[#709dff]
+          className="w-full py-2 px-4 rounded-lg bg-gradient-to-r from-indigo-600 to-indigo-400
                        text-white font-medium text-base
                        transform transition duration-200
                        hover:shadow-lg hover:scale-[1.02]
-                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5651e5]
+                       focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600
                        disabled:opacity-70 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
