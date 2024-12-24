@@ -145,7 +145,7 @@ const ExperienceSection = () => {
   ];
 
   return (
-    <section id="projects" className="w-full min-h-screen bg-gradient-to-b from-white to-gray-50 py-20">
+    <section id="experience" className="w-full min-h-screen bg-gradient-to-b from-white to-gray-50 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {/* Header */}
@@ -157,7 +157,7 @@ const ExperienceSection = () => {
               Previous Jobs and Projects
             </h2>
             <p className="text-gray-600 max-w-2xl text-lg">
-              Here are some of the key projects I've worked on throughout my career.
+              Here are some of the key projects I've worked on throughout journey.
               Each project has helped me grow as a developer and solve real-world problems.
             </p>
           </div>
