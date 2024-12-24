@@ -11,30 +11,28 @@ const HeroSection = () => {
   useEffect(() => {
     const currentRole = roles[roleIndex];
 
-    const typingSpeed = isDeleting ? 50 : 150; // Speed for typing and deleting
+    const typingSpeed = isDeleting ? 50 : 150;
 
     const timeout = setTimeout(() => {
       if (!isDeleting) {
-        // Typing logic
         if (charIndex < currentRole.length) {
           setTypedText((prev) => prev + currentRole[charIndex]);
           setCharIndex((prev) => prev + 1);
         } else {
-          setIsDeleting(true); // Start deleting after finishing typing
+          setIsDeleting(true);
         }
       } else {
-        // Deleting logic
         if (charIndex > 0) {
           setTypedText((prev) => prev.slice(0, -1));
           setCharIndex((prev) => prev - 1);
         } else {
-          setIsDeleting(false); // Switch back to typing
-          setRoleIndex((prev) => (prev + 1) % roles.length); // Move to next role
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % roles.length);
         }
       }
     }, typingSpeed);
 
-    return () => clearTimeout(timeout); // Cleanup timeout on component unmount
+    return () => clearTimeout(timeout);
   }, [typedText, isDeleting, charIndex, roleIndex, roles]);
 
   return (

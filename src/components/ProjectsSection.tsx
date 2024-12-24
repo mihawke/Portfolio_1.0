@@ -85,7 +85,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   </div>
 );
 
-const ExperienceSection = () => {
+const ProjectsSection = () => {
   const projects = [
     {
       title: "E-Commerce Platform",
@@ -148,7 +148,7 @@ const ExperienceSection = () => {
           {/* Header */}
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-700">
-              Experience
+              Projects
             </h2>
             <p className="text-gray-600 max-w-2xl text-lg">
               Here are some of the key projects I've worked on throughout journey.
@@ -168,4 +168,4 @@ const ExperienceSection = () => {
   );
 };
 
-export default ExperienceSection;
+export default ProjectsSection;

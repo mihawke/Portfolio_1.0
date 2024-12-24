@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './App.css'
-import { AboutSection } from './components/AboutSection'
 import ContactSection from './components/ContactSections'
-import ExperienceSection from './components/ExperienceSection'
 import Footer from './components/Footer'
 import HeroSection from './components/HeroSection'
 import SkillsSection from './components/SkillsSection'
 import Navmenu from './components/Navmenu'
 import { FaBars } from 'react-icons/fa6'
+import ProjectsSection from './components/ProjectsSection'
+import AboutSection from './components/AboutSection'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,7 @@ function App() {
           <HeroSection />
           <AboutSection />
           <SkillsSection />
-          <ExperienceSection />
+          <ProjectsSection />
           <ContactSection />
           <Footer />
         </>

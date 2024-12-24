@@ -19,8 +19,13 @@ const ContactSection = () => {
     }));
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true)
+  };
+
   return (
-    <section className="flex w-full items-center justify-center gap-20 py-40">
+    <section className="flex w-full items-center justify-center gap-20 py-40 bg-gradient-to-b from-white to-gray-50">
       <div>
         <h2 className="text-3xl md:text-5xl font-bold text-gray-700 mb-5">
           Let's <span className='text-indigo-600'>Connect !</span>
@@ -35,6 +40,7 @@ const ContactSection = () => {
         action="https://formsubmit.co/ab5de6c200178acf60060d82d28a2027"
         method="POST"
         className="max-w-xl space-y-2"
+        onSubmit={handleSubmit}
       >
 
         {/* Name Field */}

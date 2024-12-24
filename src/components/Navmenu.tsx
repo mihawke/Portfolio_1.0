@@ -22,7 +22,7 @@ const Navmenu: React.FC<NavmenuProps> = ({ isNavVisible }) => {
                     <li key={label} className="group">
                         <a
                             href={href}
-                            className="ml-10 text-3xl font-semibold font-roboto uppercase text-white hover:text-indigo-800 transition-colors duration-300"
+                            className="ml-10 text-3xl font-semibold font-roboto uppercase tracking-wide text-white hover:text-indigo-800 transition-colors duration-300"
                         >
                             {label}
                         </a>

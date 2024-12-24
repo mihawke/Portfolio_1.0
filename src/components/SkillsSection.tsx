@@ -1,4 +1,4 @@
-import React, {  ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 interface SkillCardProps {
   title: string
@@ -37,8 +37,8 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="w-full min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="space-y-12">
           {/* Header */}
           <div className="space-y-4 text-center">
