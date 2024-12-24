@@ -1,0 +1,54 @@
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Parent container to hold waves */
+.wave-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+}
+
+/* Base wave style */
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0.6;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  animation: wave-animation 6s infinite linear;
+}
+
+/* First wave */
+.wave:nth-child(1) {
+  animation-delay: 0s;
+}
+
+/* Second wave (slightly delayed) */
+.wave:nth-child(2) {
+  animation-delay: 2s;
+  opacity: 0.4;
+}
+
+/* Third wave (more delayed and faded) */
+.wave:nth-child(3) {
+  animation-delay: 4s;
+  opacity: 0.2;
+}
+
+/* Wave animation */
+@keyframes wave-animation {
+  0% {
+      transform: translateY(-50%) translateX(0);
+  }
+  100% {
+      transform: translateY(-50%) translateX(-50%);
+  }
+}
