@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const AboutSection = () => {
   return (
     <section id="about" className="w-full min-h-screen bg-gradient-to-b from-gray-50 to-white">
